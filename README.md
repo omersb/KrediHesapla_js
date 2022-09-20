@@ -1,5 +1,5 @@
 
-<h1>Hi I’m Ömer Said 👋. Welcome to my Kredi Hesaplama Aracı - JS</h1>
+<h1>Hi I’m Ömer Said 👋. Welcome to my Loan Calculator - JS</h1>
 
 <br>
 
