@@ -27,8 +27,36 @@ hesaplaBtn.addEventListener("click", (e) => {
     (tutar.value * (faiz * (1 + faiz) ** vade.value)) /
     ((1 + faiz) ** vade.value - 1);
 
-//   console.log(taksit);
-  console.log(oran);
-
-  
+  // console.log(taksit);
+  sonuclarıGöster();
 });
+
+const sonuclarıGöster = () => {
+  const sonuclar = document.querySelector(".sonuclar");
+
+  sonuclar.innerHTML = `
+    <h2 class="text-warning mt-3">Kredi Bilgileri</h2>
+    <table class="table table-bordered border-warning">
+        <tbody>
+            <tr>
+                <th>Kredi Miktarı</th>
+                <td>${tutar.value} ₺</td>
+                <th>Kredi Tipi</th>
+                <td>${select.value}</td>
+            </tr>
+            <tr>
+                <th>Vade</th>
+                <td>${vade.value}</td>
+                <th>Faiz Oranı</th>
+                <td>${oran}</td>
+            </tr>
+            <tr>
+                <th>Toplam Tutar</th>
+                <td>${(taksit * vade.value).toFixed(2)} ₺</td>
+                <th>Taksit Tutarı</th>
+                <td>${taksit.toFixed(2)} ₺</td>
+            </tr>
+        </tbody>
+    </table>
+    `;
+};
