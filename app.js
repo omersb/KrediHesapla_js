@@ -21,5 +21,14 @@ hesaplaBtn.addEventListener("click", (e) => {
     alert("Lütfen Kredi türü, Vade ve Tutar bilgilerini giriniz.");
   }
 
+  const faiz = oran / 100;
+
+  taksit =
+    (tutar.value * (faiz * (1 + faiz) ** vade.value)) /
+    ((1 + faiz) ** vade.value - 1);
+
+//   console.log(taksit);
   console.log(oran);
+
+  
 });
